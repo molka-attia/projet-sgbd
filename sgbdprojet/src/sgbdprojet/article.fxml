@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="554.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sgbdprojet.FXMLDocumentController">
+<children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <AnchorPane prefHeight="600.0" prefWidth="200.0" styleClass="sidebar">
+         <children>
+            <Pane layoutX="22.0" layoutY="30.0" />
+            <HBox layoutX="25.0" layoutY="91.0" prefHeight="30.0" prefWidth="144.0">
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-product-50.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="utilisateur" mnemonicParsing="false" onAction="#OpenUtilisateur" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-border-width: 0px 0px  0px  0px;" styleClass="signupBtn" text="Articles" textFill="WHITE" />
+               </children>
+            </HBox>
+            <HBox layoutX="25.0" layoutY="125.0" prefHeight="30.0" prefWidth="144.0">
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-buying-50.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="techniciens" mnemonicParsing="false" onAction="#OpenTechniciens" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-border-width: 0px 0px  0px  0px;" styleClass="signupBtn" text="Commandes" textFill="WHITE" />
+               </children>
+            </HBox>
+            <HBox layoutX="25.0" layoutY="161.0" prefHeight="30.0" prefWidth="144.0">
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-budget-50.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="groupes" mnemonicParsing="false" onAction="#OpenGroupes" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-border-width: 0px 0px  0px  0px;" styleClass="signupBtn" text="Livraisons" textFill="WHITE" />
+               </children>
+            </HBox>
+            <HBox layoutX="21.0" layoutY="233.0" prefHeight="30.0" prefWidth="157.0" />
+            <Button fx:id="sedeconnecter" layoutX="100.0" layoutY="536.0" mnemonicParsing="false" onAction="#Opensedeconnecter" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-border-width: 0px 0px  0px  0px;" text="Se déconnecter" textFill="WHITE" />
+            <Button fx:id="helpdesk" layoutX="25.0" layoutY="30.0" mnemonicParsing="false" onAction="#openhelpdesk" prefHeight="30.0" prefWidth="151.0" styleClass="labbtn" text="Bienvenu">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <stylesheets>
+            <URL value="@stylesheet.css" />
+            <URL value="@stylesheet/stylesheet.css" />
+         </stylesheets>
+      </AnchorPane>
+      <TableView fx:id="tableticket" layoutX="215.0" layoutY="112.0" prefHeight="282.0" prefWidth="570.0">
+         <columns>
+            <TableColumn fx:id="description" prefWidth="73.5999755859375" text="refart" />
+            <TableColumn fx:id="priorite" prefWidth="97.5999755859375" text="designation" />
+            <TableColumn fx:id="responsable" prefWidth="67.20001220703125" text="prixA" />
+            <TableColumn prefWidth="75.0" text="prixV" />
+            <TableColumn prefWidth="75.0" text="codeTVA" />
+            <TableColumn prefWidth="89.5999755859375" text="categorie" />
+            <TableColumn prefWidth="91.199951171875" text="qtestk" />
+         </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="230.0" layoutY="54.0" prefHeight="30.0" prefWidth="200.0" styleClass="labbtn" text="Gestion des articles" textFill="#2262c6">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="213.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-product-48.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="207.0" layoutY="411.0" prefHeight="162.0" prefWidth="570.0" style="-fx-border-color: #AEB2C3;">
+         <children>
+            <TextField layoutX="88.0" layoutY="25.0" prefHeight="26.0" prefWidth="132.0" />
+            <TextField layoutX="84.0" layoutY="68.0" prefHeight="26.0" prefWidth="132.0" />
+            <TextField layoutX="86.0" layoutY="112.0" prefHeight="26.0" prefWidth="132.0" />
+            <TextField layoutX="288.0" layoutY="110.0" prefHeight="26.0" prefWidth="118.0" />
+            <TextField layoutX="289.0" layoutY="67.0" prefHeight="26.0" prefWidth="118.0" />
+            <TextField layoutX="288.0" layoutY="26.0" prefHeight="26.0" prefWidth="117.0" />
+            <Label layoutX="17.0" layoutY="30.0" prefHeight="18.0" prefWidth="33.0" text="refart">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="9.0" layoutY="71.0" prefHeight="18.0" prefWidth="106.0" text="designation">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="114.0" prefHeight="18.0" prefWidth="106.0" text="prixA">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="230.0" layoutY="30.0" prefHeight="18.0" prefWidth="48.0" text="prixV">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="227.0" layoutY="71.0" prefHeight="18.0" prefWidth="106.0" text="codeTVA">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="229.0" layoutY="114.0" prefHeight="18.0" prefWidth="106.0" text="codeTVA">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="432.0" layoutY="8.0" prefHeight="18.0" prefWidth="48.0" text="qtesktk">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField layoutX="432.0" layoutY="29.0" prefHeight="26.0" prefWidth="117.0" />
+            <Button layoutX="430.0" layoutY="68.0" mnemonicParsing="false" text="Ajouter" />
+            <Button layoutX="491.0" layoutY="68.0" mnemonicParsing="false" text="Modifier" />
+            <Button layoutX="456.0" layoutY="110.0" mnemonicParsing="false" text="Supprimer" />
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
